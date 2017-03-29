@@ -1,0 +1,13 @@
+version: '2'
+services:
+  postgres:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+        - 5432
+  pgadmin:
+    image: foxylion/pgadmin4
+    mem_limit: 512M
+    ports:
+       - 80
